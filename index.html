@@ -1,29 +1,127 @@
 <!DOCTYPE html>
-<html lang="es">
-   <head>
-    
-      <meta charset="UTF-8">
-      <title>pag de city</title>
-      <meta name="viewport" content="width=device-width, initialscale=1.0">
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio y/o CV</title>
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans antialiased selection:bg-indigo-500 selection:text-white">
 
-   </head>
+    <!-- Navegación Adaptativa -->
+    <header class="fixed top-0 w-full bg-slate-900/90 backdrop-blur-md z-50 border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">            
+            
+            <!-- Menú PC / Laptops (md en adelante) -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#sobre-mi" class="hover:text-indigo-400 transition-colors">Sobre mí</a>
+                <a href="#habilidades" class="hover:text-indigo-400 transition-colors">Habilidades</a>
+                <a href="#proyectos" class="hover:text-indigo-400 transition-colors">Proyectos</a>
+            </nav>
 
-   <!-- Contenido interactuable de la pagina -->
-   <body>
+            <!-- Botón Sándwich (Móviles y Tablets) -->
+            <button id="menu-btn" aria-label="Abrir menú" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2 rounded-lg hover:bg-slate-800 transition-colors">
+                <!-- Ícono Sándwich (3 líneas) -->
+                <svg id="icon-hamburger" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <!-- Ícono Cerrar (X) -->
+                <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
 
-      <header>
-      <h3>CV MICHAEL CIUDAD</h3>
-      </header>
+        <!-- Menú Desplegable Sándwich (Móvil/Tablet) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-slate-800 px-6 py-4 space-y-4 shadow-xl">
+            <a href="#sobre-mi" class="mobile-link block text-slate-300 hover:text-indigo-400 font-medium py-1">Sobre mí</a>
+            <a href="#habilidades" class="mobile-link block text-slate-300 hover:text-indigo-400 font-medium py-1">Habilidades</a>
+            <a href="#proyectos" class="mobile-link block text-slate-300 hover:text-indigo-400 font-medium py-1">Proyectos</a>
+        </div>
+    </header>
 
+    <main class="max-w-6xl mx-auto px-6 pt-28">
 
-      <!-- Pie de paginaa -->
-      <footer>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-[70vh] flex flex-col justify-center items-start space-y-6">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-slate-100">Michael Ciuda</h1>
+            <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold text-slate-400">Mi Portafolio</h2>
+            <p class="max-w-xl text-slate-400 text-base sm:text-lg leading-relaxed">
+               Estudiante de Ingeniería en Informática en Duoc UC.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="#proyectos" class="text-center bg-indigo-600 hover:bg-indigo-500 text-white font-medium px-6 py-3 rounded-lg transition-all shadow-lg shadow-indigo-600/20">Ver Proyectos</a>
+            </div>
+        </section>
 
+        <!-- Sobre mi -->
+<section id="sobre-mi" class="py-16 sm:py-20 border-t border-slate-800 text-center">
+    <div class="max-w-2xl mx-auto space-y-4">
+        <h2 class="text-3xl font-bold text-slate-100 mb-6">
+            Sobre Mí
+        </h2>
+        <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+            Estudiante de Ingeniería en Informática en Duoc UC San Joaquín.
+        </p>
+        <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+            Soy un estudiante con interés principalmente en el área de base de datos y ciberseguridad.
+        </p>
+        <p class="text-slate-400 text-base sm:text-lg leading-relaxed">
+            Me gustan los deportes y estar desafiándome a aprender cosas nuevas constantemente.
+        </p>
+    </div>
+</section>
 
+        <!-- Habilidades -->
+        <section id="habilidades" class="py-16 sm:py-20 border-t border-slate-800">
+            <h2 class="text-2xl font-bold text-slate-100 mb-8 flex items-center gap-2">
+                <span class="text-indigo-400 font-mono text-xl"></span> Habilidades Técnicas
+            </h2>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Frontend -->
+                <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-800">
+                    <h3 class="text-indigo-400 font-semibold mb-4 text-lg">algo</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>algo</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>algo</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>algo</li>
+                    </ul>
+                </div>
+                <!-- Backend -->
+                <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-800">
+                    <h3 class="text-indigo-400 font-semibold mb-4 text-lg">algo</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>algo</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>algo</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>algo</li>
+                    </ul>
+                </div>
+                <!-- Bases de Datos & Herramientas -->
+                <div class="bg-slate-800/40 p-6 rounded-xl border border-slate-800 sm:col-span-2 md:col-span-1">
+                    <h3 class="text-indigo-400 font-semibold mb-4 text-lg">algo</h3>
+                    <ul class="space-y-2 text-slate-300 text-sm">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>algo</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>algo</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-indigo-400 rounded-full"></span>algo</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-      </footer>
-  
+        <!-- Proyectos -->
+        
 
-   </body>
+        
 
+    </main>
+
+    <footer class="text-center py-6 border-t border-slate-800 text-slate-500 text-sm font-mono">
+        Gracias por visitar mi portafolio, espero te haya gustado :)
+    </footer>
+
+    <!-- Enlace al archivo JS dentro de la carpeta js/ -->
+    <script src="./js/main.js"></script>
+</body>
 </html>
